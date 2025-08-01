@@ -141,6 +141,7 @@ Instead, you can add your user to the docker group like below:
 
 ```bash
 sudo usermod -aG docker $USER
+newgrp docker
 ```
 
 Then close/restart your terminal (or logout) and you should be able to run docker commands (like `docker info`) without needing sudo.
@@ -165,3 +166,4 @@ NV Power Mode: MAXN
 ```
 
 See [here](https://docs.nvidia.com/jetson/archives/r36.2/DeveloperGuide/SD/PlatformPowerAndPerformance/JetsonOrinNanoSeriesJetsonOrinNxSeriesAndJetsonAgxOrinSeries.html#supported-modes-and-power-efficiency) for a table of the power modes available for the different Jetson devices, and for documentation on the [`nvpmodel`](https://docs.nvidia.com/jetson/archives/r36.2/DeveloperGuide/SD/PlatformPowerAndPerformance/JetsonOrinNanoSeriesJetsonOrinNxSeriesAndJetsonAgxOrinSeries.html#power-mode-controls) tool.
+
